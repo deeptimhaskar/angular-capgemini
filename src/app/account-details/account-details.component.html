@@ -1,9 +1,10 @@
 <div class="container-fluid bgColor">
   <div class="row box">
     <div [ngClass]="showDefaultSortedTab ?  'col tab active': 'col tab'" (click)="sortData('Account')">
-      Account
+      <span class="accText">Account
       <i class="fa fa-chevron-down" *ngIf="this.accountSortOrder == 'asc' && showDefaultSortedTab"></i>
       <i class="fa fa-chevron-up" *ngIf="this.accountSortOrder == 'desc' && showDefaultSortedTab"></i>
+      </span>
     </div>
     <div [ngClass]="!showDefaultSortedTab ?  'col text-right tab active': 'col text-right tab'" (click)="sortData('AvaliableCash')">
       <i class="fa fa-chevron-down" *ngIf="this.cashSortOrder == 'asc' && !showDefaultSortedTab"></i>
