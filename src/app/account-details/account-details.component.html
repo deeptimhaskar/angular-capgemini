@@ -1,3 +1,28 @@
-<p>
-  my app
-</p>
+<div class="container-fluid bgColor">
+  <div class="row box">
+    <div [ngClass]="showDefaultSortedTab ?  'col tab active': 'col tab'" (click)="sortData('Account')">
+      Account
+      <i class="fa fa-chevron-down" *ngIf="this.accountSortOrder == 'asc' && showDefaultSortedTab"></i>
+      <i class="fa fa-chevron-up" *ngIf="this.accountSortOrder == 'desc' && showDefaultSortedTab"></i>
+    </div>
+    <div [ngClass]="!showDefaultSortedTab ?  'col text-right tab active': 'col text-right tab'" (click)="sortData('AvaliableCash')">
+      <i class="fa fa-chevron-down" *ngIf="this.cashSortOrder == 'asc' && !showDefaultSortedTab"></i>
+      <i class="fa fa-chevron-up" *ngIf="this.cashSortOrder == 'desc' && !showDefaultSortedTab"></i>
+      Avaliable Cash
+      <div class="subHeader">Today's Change</div>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="row data list" *ngFor="let item of accountdetails | slice:0:show">
+    <div class="line"></div>
+    <div class="col accountNo">{{item.accountNumber}}</div>
+    <div class="col text-right AvalCash">{{item.availCash}}
+      <div [ngClass]="item.positive ? 'price positive' : 'price negative' ">{{item.price}}</div>
+    </div>
+  </div>
+
+  <div class="line"></div>
+  <div class="row data loadMore">
+    <div id="next" *ngIf="show < accountdetails.length" (click)="loadMore()">Load more</div>
+  </div>
+</div>
