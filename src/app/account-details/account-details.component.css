@@ -14,8 +14,8 @@
 }
 .accText{
 position: absolute;
-bottom:0;
-left:0;
+bottom:5px;
+left:15px;
 }
 .active {
     background: #F0F0F0;
