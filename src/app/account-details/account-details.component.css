@@ -66,9 +66,9 @@ font: caption;
 }
 
 .negative {
-    color: red;
+    color:  #FF0000;;
   }
   
   .positive {
-    color: green;
+    color: #008000;
   }
