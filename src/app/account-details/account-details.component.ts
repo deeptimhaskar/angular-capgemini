@@ -16,7 +16,7 @@ export class AccountDetailsComponent implements OnInit {
   public  accountSortOrder: string;
   public cashSortOrder: string;
   public  showDefaultSortedTab: boolean = false;
-  public  constructor(public data: response) {
+  constructor(public data: response) {
     this.show = 3
   }
 
@@ -68,5 +68,4 @@ export class AccountDetailsComponent implements OnInit {
       }
     }
   }
-
 }

@@ -21,7 +21,6 @@
       <div [ngClass]="item.positive ? 'price positive' : 'price negative' ">{{item.price}}</div>
     </div>
   </div>
-
   <div class="line"></div>
   <div class="row data loadMore" *ngIf="show < accountdetails.length">
     <div id="next" (click)="loadMore()">Load more</div>
