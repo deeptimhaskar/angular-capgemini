@@ -11,11 +11,11 @@ import { FormArray } from '@angular/forms/src/model';
 })
 export class AccountDetailsComponent implements OnInit {
   public accountdetails: {};
-  public  show = 3;
-  public  limit = 3;
-  public  accountSortOrder: string;
+  public show = 3;
+  public limit = 3;
+  public accountSortOrder: string;
   public cashSortOrder: string;
-  public  showDefaultSortedTab: boolean = false;
+  public showDefaultSortedTab: boolean = false;
   constructor(public data: response) {
     this.show = 3
   }
