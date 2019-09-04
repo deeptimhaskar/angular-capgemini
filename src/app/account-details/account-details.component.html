@@ -23,7 +23,7 @@
   </div>
 
   <div class="line"></div>
-  <div class="row data loadMore">
-    <div id="next" *ngIf="show < accountdetails.length" (click)="loadMore()">Load more</div>
+  <div class="row data loadMore" *ngIf="show < accountdetails.length">
+    <div id="next" (click)="loadMore()">Load more</div>
   </div>
 </div>
